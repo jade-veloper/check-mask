@@ -59,10 +59,15 @@ const columns = [
   },
   {
     title: '길찾기',
-    key: 'findPlace',
-    render: () => (
+    key: 'findMap',
+    render: stores => (
       <span>
-        <a href="/map" target="_blank">
+        <a
+          href="/map"
+          target="_blank"
+          data-lat={stores.lat}
+          data-lng={stores.lng}
+        >
           지도에서 확인
         </a>
       </span>
