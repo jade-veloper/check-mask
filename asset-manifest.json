@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/mask-info/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/mask-info/static/js/main.31b66c66.chunk.js",
+    "main.js.map": "/mask-info/static/js/main.31b66c66.chunk.js.map",
+    "runtime-main.js": "/mask-info/static/js/runtime-main.a9148be6.js",
+    "runtime-main.js.map": "/mask-info/static/js/runtime-main.a9148be6.js.map",
+    "static/css/2.1bd2ab2f.chunk.css": "/mask-info/static/css/2.1bd2ab2f.chunk.css",
+    "static/js/2.201958c8.chunk.js": "/mask-info/static/js/2.201958c8.chunk.js",
+    "static/js/2.201958c8.chunk.js.map": "/mask-info/static/js/2.201958c8.chunk.js.map",
+    "index.html": "/mask-info/index.html",
+    "precache-manifest.87817616813876668e462974f298983d.js": "/mask-info/precache-manifest.87817616813876668e462974f298983d.js",
+    "service-worker.js": "/mask-info/service-worker.js",
+    "static/css/2.1bd2ab2f.chunk.css.map": "/mask-info/static/css/2.1bd2ab2f.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/mask-info/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.201958c8.chunk.js.LICENSE.txt": "/mask-info/static/js/2.201958c8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9148be6.js",
+    "static/css/2.1bd2ab2f.chunk.css",
+    "static/js/2.201958c8.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.31b66c66.chunk.js"
+  ]
+}
