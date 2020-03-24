@@ -52,26 +52,16 @@ const columns = [
     )
   },
   {
-    title: '업데이트 시간',
+    title: '마지막 업데이트',
     dataIndex: 'created_at',
     key: 'created_at',
     render: created_at => <span>{created_at || '업데이트 정보 없음'}</span>
   },
   {
-    title: '길찾기',
-    key: 'findMap',
-    render: stores => (
-      <span>
-        <a
-          href="/map"
-          target="_blank"
-          data-lat={stores.lat}
-          data-lng={stores.lng}
-        >
-          지도에서 확인
-        </a>
-      </span>
-    )
+    title: '마스크 입고 시간',
+    dataIndex: 'stock_at',
+    key: 'stock_at',
+    render: stock_at => <span>{stock_at || '마스크 입고 정보 없음'}</span>
   }
 ];
 
