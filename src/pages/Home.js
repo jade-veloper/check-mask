@@ -50,10 +50,11 @@ const PolicyInfoButton = styled.button`
   width: 200px;
   height: 50px;
   font-size: 1.25rem;
+  font-weight: 600;
   margin: 20px;
   border-style: none;
   border-radius: 25px;
-  background-color: white;
+  background: linear-gradient(#f8f9fa, #ced4da);
   box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.3);
 
   a {
@@ -66,10 +67,12 @@ const CurrentPositionButton = styled.button`
   width: 200px;
   height: 50px;
   font-size: 1.25rem;
+  font-weight: 600;
   margin: 20px;
   border-style: none;
   border-radius: 25px;
-  background-color: royalblue;
+  /* background: #55a532 linear-gradient(#91dd70, #55ae2e); */
+  background: linear-gradient(#91dd70, #55ae2e);
   box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 0.3);
 
   a {

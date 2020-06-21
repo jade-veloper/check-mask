@@ -16,18 +16,18 @@ const columns = [
   {
     title: '이름',
     dataIndex: 'name',
-    key: 'name'
+    key: 'name',
   },
   {
     title: '주소',
     dataIndex: 'addr',
-    key: 'addr'
+    key: 'addr',
   },
   {
     title: '재고현황',
     key: 'remain_stat',
     dataIndex: 'remain_stat',
-    render: remain_stat => (
+    render: (remain_stat) => (
       <span>
         {remain_stat === 'empty' ? (
           <Tag color={'#868e96'} key={remain_stat}>
@@ -46,23 +46,51 @@ const columns = [
             충분
           </Tag>
         ) : (
-          '재고정보 없음'
+          <Tag color={'#212529'} key={remain_stat}>
+            판매중지
+          </Tag>
         )}
       </span>
-    )
+    ),
   },
   {
     title: '마지막 업데이트',
     dataIndex: 'created_at',
     key: 'created_at',
-    render: created_at => <span>{created_at || '업데이트 정보 없음'}</span>
+    render: (created_at) => (
+      <span>
+        {created_at
+          ? created_at.slice(5, 7) +
+            '월 ' +
+            created_at.slice(8, 10) +
+            '일 ' +
+            created_at.slice(11, 13) +
+            '시 ' +
+            created_at.slice(14, 16) +
+            '분 '
+          : '-'}
+      </span>
+    ),
   },
   {
     title: '마스크 입고 시간',
     dataIndex: 'stock_at',
     key: 'stock_at',
-    render: stock_at => <span>{stock_at || '마스크 입고 정보 없음'}</span>
-  }
+    render: (stock_at) => (
+      <span>
+        {stock_at
+          ? stock_at.slice(5, 7) +
+            '월 ' +
+            stock_at.slice(8, 10) +
+            '일 ' +
+            stock_at.slice(11, 13) +
+            '시 ' +
+            stock_at.slice(14, 16) +
+            '분 '
+          : '-'}
+      </span>
+    ),
+  },
 ];
 
 // const data = [
@@ -90,7 +118,7 @@ function MaskList() {
     const fetchData = async () => {
       setLoading(true);
       (function findPosition() {
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
           setMyLat(position.coords.latitude);
           setMyLng(position.coords.longitude);
         });
@@ -116,7 +144,7 @@ function MaskList() {
           height: '100vh',
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
         }}
       >
         <Spin
@@ -134,7 +162,12 @@ function MaskList() {
 
   return (
     <TableBlock>
-      <Table columns={columns} dataSource={stores} />
+      <Table
+        columns={columns}
+        dataSource={stores}
+        pagination={{ position: ['bottomCenter'] }}
+        rowKey="code"
+      />
     </TableBlock>
   );
 }
