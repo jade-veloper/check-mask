@@ -20,5 +20,3 @@ React를 공부한 이후 처음으로 스스로 기획하고 개발을 진행�
 ## 배포된 웹사이트 URL
 
 - https://check-mask.netlify.com/
-
-## 프로젝트 기여도 : 100%
